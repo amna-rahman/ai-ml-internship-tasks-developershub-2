@@ -118,27 +118,25 @@ Build a reusable and production-ready machine learning pipeline for predicting *
 - The model performs strongly for predicting non-churned customers and reasonably well for detecting churned customers, which tend to be harder to classify. The final pipeline is saved and ready for deployment or batch inference.
 
 
----
-
-### 🔹 Pipeline Visualization
-
-> 🧠 **Best Estimator (Random Forest)**  
-![Pipeline Output](<paste-your-pipeline-screenshot-path-or-url-here>)
-
----
 
 ## 🚧 Task 5: Auto-Tagging Support Tickets Using LLM (WIP)
 
-### 🔹 Objective
 
-Automatically tag free-text support tickets into categories using a large language model (LLM), applying:
-- **Zero-shot classification**
-- **Few-shot learning**
-- **Fine-tuning (optional)**
+**Dataset:** suraj520/customer-support-ticket-dataset
 
-_(Details and results will be added upon completion)_
+### 🔧 Methods Used:
+- ✅ Zero-shot classification using `facebook/bart-large-mnli`
+- ✅ Fine-tuning using `distilbert-base-uncased` on `ticket_text → label`
+- ✅ Top-3 label predictions per ticket
 
----
+### 📈 Results:
+- Fine-tuned model achieved  Top-3 Accuracy
+- Predictions exported to `fine_tuned_ticket_predictions.csv`
+
+### 📁 Files:
+- notebook.ipynb
+- fine_tuned_ticket_predictions.csv
+
 
 ## ✅ Submission Notes
 
@@ -151,8 +149,3 @@ _(Details and results will be added upon completion)_
 - Evaluated using standard metrics
 - Aligned with production-readiness practices
 
----
-
-**📅 Final Submission Due**: July 24th, 2025  
-**💼 Intern Name**: y/N  
-**🏷️ GitHub Repo**: [github.com/your-username/internship-tasks](https://github.com/your-username/internship-tasks)
